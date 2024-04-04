@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/LiarsDiceRewritten/board.h
+string
+-
+iostream
+-
+vector
+-
+stdlib.h
+-
+curbet.h
+/workspaces/LiarsDiceRewritten/curbet.h
+
+/workspaces/LiarsDiceRewritten/curbet.h
+iostream
+-
+string
+-
+
+/workspaces/LiarsDiceRewritten/main.cpp
+iostream
+-
+curbet.h
+/workspaces/LiarsDiceRewritten/curbet.h
+board.h
+/workspaces/LiarsDiceRewritten/board.h
+
