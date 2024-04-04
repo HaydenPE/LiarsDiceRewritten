@@ -8,17 +8,17 @@
 class Board{
     public:
         CurBet tablestate;
+        
         Board(){} //Constructor
         ~Board(){} //Destructor
         void ShuffleDice(){ //Creates dice for both players.
-            srand(time(NULL));
-            while(opDice.size() < 5){
+            for(int i = 0; i < 6; i++){
                 opDice.push_back(rand() % 6 + 1);
-                totalDice.push_back(opDice.at(opDice.size()));
-            }
-            while(yourDice.size() < 5){
                 yourDice.push_back(rand() % 6 + 1);
-                totalDice.push_back(yourDice.at(yourDice.size()));
+            }
+            for(int j = 0; j < 6; j++){
+                totalDice.push_back(opDice.at(j));
+                totalDice.push_back(yourDice.at(j));
             }
         }
         void clearDice(){ //Clears everyone's dice.
@@ -26,7 +26,7 @@ class Board{
             yourDice.clear();
             totalDice.clear();
         }
-        bool liar(){
+        bool liar(){ //Determines results of liar state.
             int amount = tablestate.getAmt();
             int face = tablestate.getFace();
             int compareAmt = 0;
@@ -42,13 +42,21 @@ class Board{
             std::cout << "Opponent is a liar.\n";
             return true;
         }
-        void printDice(std::vector<int> dice){
-            for(int i = 0; i < dice.size(); i++){
-                std::cout << dice.at(i) << " \n"; 
+        void printDice(){
+            std::cout << "Opponent Dice: ";
+            for(int i = 0; i < opDice.size(); i++){
+                std::cout << opDice.at(i) << " ";
             }
+            std::cout << "\n";
+            std::cout << "Your Dice: ";
+            for(int j = 0; j < yourDice.size(); j++){
+                std::cout << yourDice.at(j) << " ";
+            }
+            std::cout << "\n";
         }
+
     private:
-        std::vector<int> opDice;
-        std::vector<int> yourDice;
-        std::vector<int> totalDice;
+        std::vector<int> opDice; //Computer Opponent's dice.
+        std::vector<int> yourDice; //Player's dice.
+        std::vector<int> totalDice; //Cumulative dice. This is used for calculations involving everyone's dice.
 };

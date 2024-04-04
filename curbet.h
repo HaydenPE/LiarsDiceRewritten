@@ -5,25 +5,19 @@
 class CurBet{
     public:
         CurBet(){}
-
         ~CurBet(){}
-
         void changeFace(int cFace){
             face = cFace;
         }
-
         void changeAmt(int cAmt){
             amt = cAmt;
         }
-
         int getFace(){
             return face;
         }
-
         int getAmt(){
             return amt;
         }
-
         bool newBet(){
             int bFace;
             int bAmt;
@@ -51,6 +45,15 @@ class CurBet{
             std::cin >> bFace;
             std::cout << "Type in the amount.\n";
             std::cin >> bAmt;
+            if((bFace < 0 || bFace > 6)){
+                std::cout << "ERROR: Impossible face.";
+                return false;
+            }
+            if((bAmt < 0 || bAmt > 10)){
+                std::cout << "ERROR: BOOTSTRAP BILL, YOU ARE A LIAR, AND YOU WILL SPEND AN ETERNITY ON THIS SHIP!\n";
+                std::cout << "Master Turner, feel free to go ashore... THE VERY NEXT TIME WE MAKE PORT!\n";
+                return false;
+            }
             if((bFace == face && bAmt > amt) || (bFace != face && bAmt > amt) || (bFace > face && bAmt == amt)){
                 changeFace(bFace);
                 changeAmt(bAmt);
@@ -66,6 +69,5 @@ class CurBet{
 
     private:
         int face;
-        
         int amt;
 };
