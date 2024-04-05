@@ -1,6 +1,11 @@
 [
 {
   "directory": "/workspaces/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/runTests.dir/tests.cpp.o -c /workspaces/LiarsDiceRewritten/tests.cpp",
+  "file": "/workspaces/LiarsDiceRewritten/tests.cpp"
+},
+{
+  "directory": "/workspaces/LiarsDiceRewritten/build",
   "command": "/usr/bin/g++    -g   -o CMakeFiles/runMain.dir/main.cpp.o -c /workspaces/LiarsDiceRewritten/main.cpp",
   "file": "/workspaces/LiarsDiceRewritten/main.cpp"
 }

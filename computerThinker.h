@@ -30,11 +30,56 @@ class computerThinker{
                 suspicion += abs((amts / faces));
                 changeTableKnowledge(newBet);
             }
-            if(suspicion >= 4.3){ //Why such a weird number, you may ask? Check the bottom of this page.
+            if(suspicion >= 3.5){ //Why such a weird number, you may ask? Check the bottom of this page.
                 std::cout << "Liar Detected.\n";
                 return true;
             }
             return false;
+        }
+        void makeBet(CurBet &newBet){
+            std::cout << "Opponent's turn... \n";
+            bool processing = true;
+            int choose;
+            int decisionVariable = (rand() % 1 + 1);
+            int secondDecisionVariable = (rand() % 6 + 1);
+            while(processing){
+            choose = (rand() % 3 + 1);
+            switch(choose){
+                case 1: //Amount++, Face~~
+                    if(newBet.getAmt() >= 5){
+                        break;
+                    }
+                    else{
+                        newBet.changeAmt(newBet.getAmt() + decisionVariable);
+                        processing = false;
+                        break;
+                    }
+                case 2: //Amount++, Face!=
+                    if(newBet.getAmt() >= 5){
+                        break;
+                    }
+                    else{
+                        newBet.changeAmt(newBet.getAmt() + decisionVariable);
+                        newBet.changeFace(secondDecisionVariable);
+                        processing = false;
+                        break;
+                    }
+                case 3: //Amount-- Face++
+                {
+                    if(newBet.getAmt() <= 3 || newBet.getFace() >= 5){
+                        break;
+                    }
+                    else{
+                        newBet.changeAmt(newBet.getAmt() - decisionVariable);
+                        newBet.changeFace(newBet.getFace() + decisionVariable);
+                        processing = false;
+                        break;
+                    }
+                }
+            }
+            }
+            changeTableKnowledge(newBet);
+            std::cout << "New Current Bet (face, amount): " << newBet.getFace() << " " << newBet.getAmt() << "\n";
         }
         void clearAllVars(){
             tableKnowledge.changeAmt(1);
@@ -57,3 +102,5 @@ class computerThinker{
 //remark that implies this to be the threshhold that you would call someone a liar. If you apply the algorithm to the bets
 //made in the scene (disregarding the 12 fives bet Bootstrap Bill makes, since that's an outlier), the number comes out to be
 //4.5. We reduce it to 4.3 to make up for excess suspicion increase.
+
+//EDIT 4/5/2024: It's been reduced to 3.5 to account for how safe the bot plays.

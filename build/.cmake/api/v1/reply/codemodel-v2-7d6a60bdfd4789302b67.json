@@ -14,7 +14,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -29,7 +30,8 @@
 					"name" : "LiarsDiceRewritten",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -40,6 +42,13 @@
 					"id" : "runMain::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-runMain-Debug-c85d117f356c910b73b7.json",
 					"name" : "runMain",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "runTests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-runTests-Debug-8a3fa68bf690d5bfe360.json",
+					"name" : "runTests",
 					"projectIndex" : 0
 				}
 			]
