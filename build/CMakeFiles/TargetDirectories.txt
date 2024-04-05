@@ -1,3 +1,4 @@
 /workspaces/LiarsDiceRewritten/build/CMakeFiles/rebuild_cache.dir
+/workspaces/LiarsDiceRewritten/build/CMakeFiles/runTests.dir
 /workspaces/LiarsDiceRewritten/build/CMakeFiles/edit_cache.dir
 /workspaces/LiarsDiceRewritten/build/CMakeFiles/runMain.dir

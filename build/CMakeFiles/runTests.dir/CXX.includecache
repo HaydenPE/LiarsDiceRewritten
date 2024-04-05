@@ -38,13 +38,11 @@ iostream
 string
 -
 
-/workspaces/LiarsDiceRewritten/main.cpp
-iostream
--
-curbet.h
-/workspaces/LiarsDiceRewritten/curbet.h
+/workspaces/LiarsDiceRewritten/tests.cpp
 board.h
 /workspaces/LiarsDiceRewritten/board.h
+curbet.h
+/workspaces/LiarsDiceRewritten/curbet.h
 computerThinker.h
 /workspaces/LiarsDiceRewritten/computerThinker.h
 

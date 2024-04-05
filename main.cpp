@@ -6,12 +6,30 @@ int main(){
     srand(time(NULL));
 
     bool gameState = true;
+    bool lastTurn = false; //true = you made last bet, false = opponent made last bet
     Board brd;
+    computerThinker opponent;
     brd.ShuffleDice();
-
     brd.tablestate.changeAmt(1);
     brd.tablestate.changeFace(1);
-    brd.tablestate.newBet();
+
+    opponent.changeTableKnowledge(brd.tablestate);
+    while(gameState){
+        if(!brd.tablestate.newBet()){
+            break;
+        }
+        else{
+            gameState = true;
+        }
+        if(opponent.detectLiar(brd.tablestate)){
+        }
+        else{
+            opponent.makeBet(brd.tablestate);
+            gameState = false;
+        }
+    }
+    brd.printDice();
+    brd.liar(lastTurn);
     
     return 0;
 }
