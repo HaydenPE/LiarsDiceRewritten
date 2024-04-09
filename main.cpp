@@ -12,20 +12,21 @@ int main(){
     brd.ShuffleDice();
     brd.tablestate.changeAmt(1);
     brd.tablestate.changeFace(1);
-
     opponent.changeTableKnowledge(brd.tablestate);
     while(gameState){
+        brd.printYourDiceOnly();
         if(!brd.tablestate.newBet()){
             break;
         }
         else{
-            gameState = true;
+            lastTurn = true;
         }
         if(opponent.detectLiar(brd.tablestate)){
+            gameState = false;
         }
         else{
             opponent.makeBet(brd.tablestate);
-            gameState = false;
+            lastTurn = false;
         }
     }
     brd.printDice();
