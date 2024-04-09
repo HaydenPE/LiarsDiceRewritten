@@ -61,6 +61,13 @@ class Board{
             }
             std::cout << "\n";
         }
+        void printYourDiceOnly(){
+            std::cout << "Your Dice: ";
+            for(int j = 0; j < yourDice.size(); j++){
+                std::cout << yourDice.at(j) << " ";
+            }
+            std::cout << "\n";
+        }
         bool noDice(){
             if(opDice.size() == 0 || yourDice.size() == 0){
                 return true;

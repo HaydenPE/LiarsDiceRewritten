@@ -37,6 +37,8 @@ iostream
 -
 string
 -
+vector
+-
 
 /workspaces/LiarsDiceRewritten/main.cpp
 iostream

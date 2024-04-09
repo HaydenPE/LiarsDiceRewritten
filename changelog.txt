@@ -1,0 +1,18 @@
+Liar's Dice Rewritten Changelog
+
+Note: This was made on 4/9/2024, so some changes made in previous days may not show up.
+
+---4/9/2024---
+
+Updates:
+
+> Fixed not being shown your assortment of dice.
+> Made the betting system better, by waiting for a valid dice number upon input.
+> Fixed an oversight where the game would call the incorrect player a liar.
+> Made bets easier to read.
+
+Known Issues:
+
+> Inputting more than one character during the player's liar-calling phase causes multiple valid input triggers.
+
+--- ---

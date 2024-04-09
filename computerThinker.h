@@ -79,7 +79,8 @@ class computerThinker{
             }
             }
             changeTableKnowledge(newBet);
-            std::cout << "New Current Bet (face, amount): " << newBet.getFace() << " " << newBet.getAmt() << "\n";
+            std::cout << "New Bet: ";
+            tableKnowledge.printBet();
         }
         void clearAllVars(){
             tableKnowledge.changeAmt(1);
