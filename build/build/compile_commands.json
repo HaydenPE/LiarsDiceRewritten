@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/mnt/c/users/trick/DataStructures_Git/Lab01/build",
+  "command": "/usr/bin/g++ -Dapplibrary_EXPORTS  -g -fPIC -std=c++17 -o CMakeFiles/applibrary.dir/Node.cpp.o -c /mnt/c/users/trick/DataStructures_Git/Lab01/Node.cpp",
+  "file": "/mnt/c/users/trick/DataStructures_Git/Lab01/Node.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/DataStructures_Git/Lab01/build",
+  "command": "/usr/bin/g++ -Dapplibrary_EXPORTS  -g -fPIC -std=c++17 -o CMakeFiles/applibrary.dir/LinkedList.cpp.o -c /mnt/c/users/trick/DataStructures_Git/Lab01/LinkedList.cpp",
+  "file": "/mnt/c/users/trick/DataStructures_Git/Lab01/LinkedList.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/DataStructures_Git/Lab01/build",
+  "command": "/usr/bin/g++   -g -std=c++17 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/runTests.dir/tests.cpp.o -c /mnt/c/users/trick/DataStructures_Git/Lab01/tests.cpp",
+  "file": "/mnt/c/users/trick/DataStructures_Git/Lab01/tests.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/DataStructures_Git/Lab01/build",
+  "command": "/usr/bin/g++   -g -std=c++17 -o CMakeFiles/runMain.dir/main.cpp.o -c /mnt/c/users/trick/DataStructures_Git/Lab01/main.cpp",
+  "file": "/mnt/c/users/trick/DataStructures_Git/Lab01/main.cpp"
+}
+]
