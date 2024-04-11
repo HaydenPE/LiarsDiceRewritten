@@ -30,3 +30,4 @@ Updates:
 Known Issues:
 
 > Inputting more than one character during the player's liar-calling phase causes multiple valid input triggers.
+> Code cannot be run in a codespace, due to github codespaces not recognizing #include <gtest/gtest.h>.
