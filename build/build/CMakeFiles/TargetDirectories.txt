@@ -1,0 +1,5 @@
+/mnt/c/users/trick/DataStructures_Git/Lab01/build/CMakeFiles/applibrary.dir
+/mnt/c/users/trick/DataStructures_Git/Lab01/build/CMakeFiles/runTests.dir
+/mnt/c/users/trick/DataStructures_Git/Lab01/build/CMakeFiles/runMain.dir
+/mnt/c/users/trick/DataStructures_Git/Lab01/build/CMakeFiles/edit_cache.dir
+/mnt/c/users/trick/DataStructures_Git/Lab01/build/CMakeFiles/rebuild_cache.dir
