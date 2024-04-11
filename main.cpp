@@ -3,13 +3,16 @@
 #include "board.h"
 #include "computerThinker.h"
 int main(){
+    bool wantToPlay = true;
+    char p;
+    while(wantToPlay){
     srand(time(NULL));
-
     bool gameState = true;
     bool lastTurn = false; //true = you made last bet, false = opponent made last bet
     Board brd;
     computerThinker opponent;
     brd.ShuffleDice();
+    brd.printDice();
     brd.tablestate.changeAmt(1);
     brd.tablestate.changeFace(1);
     opponent.changeTableKnowledge(brd.tablestate);
@@ -31,6 +34,11 @@ int main(){
     }
     brd.printDice();
     brd.liar(lastTurn);
-    
+    std::cout << "Would you like to play again? y/n:\n";
+    std::cin >> p;
+    if(p == 'n'){
+        wantToPlay = false;
+    }
+
     return 0;
 }

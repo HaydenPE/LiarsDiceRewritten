@@ -8,7 +8,7 @@
 class Board{
     public:
         CurBet tablestate;
-        
+    
         Board(){} //Constructor
         ~Board(){} //Destructor
         void ShuffleDice(){ //Creates dice for both players.
@@ -67,6 +67,16 @@ class Board{
                 std::cout << yourDice.at(j) << " ";
             }
             std::cout << "\n";
+        }
+        std::vector<int> getAnyDice(int chosen){
+            switch(chosen){
+                case 0:
+                    return opDice;
+                case 1:
+                    return yourDice;
+                default:
+                    return totalDice;
+            }
         }
         bool noDice(){
             if(opDice.size() == 0 || yourDice.size() == 0){

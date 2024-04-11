@@ -1,1 +1,1 @@
-/usr/bin/g++  -g   CMakeFiles/runTests.dir/tests.cpp.o  -o runTests 
+/usr/bin/g++ -g CMakeFiles/runTests.dir/tests.cpp.o -o runTests  -Wl,-rpath,/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build /usr/lib/x86_64-linux-gnu/libgtest.a -lpthread libapplibrary.so 

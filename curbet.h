@@ -22,6 +22,11 @@ class CurBet{
         void printBet(){
             std::cout << amt << " " << facenumbers.at(face-1) << "\n";
         }
+        std::string printBetButForTesting(){
+            std::string returner;
+            returner = returner + static_cast<char>(amt) + " " + facenumbers.at(face-1);
+            return returner;
+        }
         bool newBet(){
             int bFace;
             int bAmt;
@@ -58,6 +63,10 @@ class CurBet{
                 changeFace(bFace);
                 changeAmt(bAmt);
                 invalid = false;
+            }
+            else if((bFace == face && bAmt == bAmt)){
+                std::cout << "Oops! Your bet is supposed to be different. Try again.\n";
+                rightface = false;
             }
             else{
                 std::cout << "Oops! Invalid inputs. Try again.\n";

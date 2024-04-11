@@ -11,8 +11,22 @@ Updates:
 > Fixed an oversight where the game would call the incorrect player a liar.
 > Made bets easier to read.
 
+---4/10/2024 & 4/11/2024---
+
+Updates:
+
+> Rearranged files to allow for the gtest style of unit tests.
+> Created an assortment of unit tests using gtest. Check it out!
+> The program no longer ends after a round. Play as many times in a row as you'd like!
+> Added measures to prevent player from just copying their opponent's bet.
+> Improved the AI of the opponent.
+            - The opponent will now call you a liar if you make too high of a jump between bets. This is to prevent you from going:
+               - 3 Two's -> 4 Fours -> 8 Sixes
+            - The opponent will also call you a liar sooner.
+
+
+--- ---
+
 Known Issues:
 
 > Inputting more than one character during the player's liar-calling phase causes multiple valid input triggers.
-
---- ---

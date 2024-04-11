@@ -1,12 +1,27 @@
 [
 {
-  "directory": "/workspaces/LiarsDiceRewritten/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/runTests.dir/tests.cpp.o -c /workspaces/LiarsDiceRewritten/tests.cpp",
-  "file": "/workspaces/LiarsDiceRewritten/tests.cpp"
+  "directory": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++ -Dapplibrary_EXPORTS  -g -fPIC -std=c++17 -o CMakeFiles/applibrary.dir/curbet.cpp.o -c /mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/curbet.cpp",
+  "file": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/curbet.cpp"
 },
 {
-  "directory": "/workspaces/LiarsDiceRewritten/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/runMain.dir/main.cpp.o -c /workspaces/LiarsDiceRewritten/main.cpp",
-  "file": "/workspaces/LiarsDiceRewritten/main.cpp"
+  "directory": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++ -Dapplibrary_EXPORTS  -g -fPIC -std=c++17 -o CMakeFiles/applibrary.dir/board.cpp.o -c /mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/board.cpp",
+  "file": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/board.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++ -Dapplibrary_EXPORTS  -g -fPIC -std=c++17 -o CMakeFiles/applibrary.dir/computerThinker.cpp.o -c /mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/computerThinker.cpp",
+  "file": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/computerThinker.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++   -g -std=c++17 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/runTests.dir/tests.cpp.o -c /mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/tests.cpp",
+  "file": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/tests.cpp"
+},
+{
+  "directory": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/build",
+  "command": "/usr/bin/g++   -g -std=c++17 -o CMakeFiles/runMain.dir/main.cpp.o -c /mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/main.cpp",
+  "file": "/mnt/c/users/trick/OwnStuff/SE_Project/LiarsDiceRewritten/LiarsDiceRewritten/main.cpp"
 }
 ]

@@ -11,28 +11,35 @@ class computerThinker{
         CurBet tableKnowledge;
         double suspicion;
         int suspiciousFactorThing;
+        bool firstTurnPassed;
+        
         computerThinker(){
             suspicion = 0.0;
             suspiciousFactorThing = 0;
+            firstTurnPassed = false;
         }
         ~computerThinker(){}
         void changeTableKnowledge(CurBet bet){
             tableKnowledge = bet;
         }
         bool detectLiar(CurBet newBet){
-            double faces = tableKnowledge.getFace() - newBet.getFace();
-            double amts = tableKnowledge.getAmt() - newBet.getAmt();
+            double faces = newBet.getFace() - tableKnowledge.getFace();
+            double amts = newBet.getAmt() - tableKnowledge.getAmt();
+            double increment = abs((amts / faces));
             if(faces == 0 || amts == 0){
                 suspicion += (0.25 + (0.5 * suspiciousFactorThing));
                 suspiciousFactorThing++;
             }
             else{
-                suspicion += abs((amts / faces));
-                changeTableKnowledge(newBet);
+                suspicion += increment;
             }
-            if(suspicion >= 3.5){ //Why such a weird number, you may ask? Check the bottom of this page.
+            changeTableKnowledge(newBet);
+            if(firstTurnPassed && (suspicion >= 3.0 || increment > 1.5)){ //Why such a weird number, you may ask? Check the bottom of this page.
                 std::cout << "Liar Detected.\n";
                 return true;
+            }
+            else{
+                firstTurnPassed = true;
             }
             return false;
         }
@@ -105,3 +112,5 @@ class computerThinker{
 //4.5. We reduce it to 4.3 to make up for excess suspicion increase.
 
 //EDIT 4/5/2024: It's been reduced to 3.5 to account for how safe the bot plays.
+
+//EDIT 4/10/2024: Reduced further down to 3.0.
