@@ -5,8 +5,8 @@
 
 class CurBet{
     public:
-        CurBet(){}
-        ~CurBet(){}
+        CurBet(){} //Constructor
+        ~CurBet(){} //Destructor
         void changeFace(int cFace){
             face = cFace;
         }
@@ -19,7 +19,7 @@ class CurBet{
         int getAmt(){
             return amt;
         }
-        void printBet(){
+        void printBet(){ //Prints the bet in a format that is easy for a human to read.
             std::cout << amt << " " << facenumbers.at(face-1) << "\n";
         }
         std::string printBetButForTesting(){
@@ -27,7 +27,7 @@ class CurBet{
             returner = returner + static_cast<char>(amt) + " " + facenumbers.at(face-1);
             return returner;
         }
-        bool newBet(){
+        bool newBet(){ //Allows the player to interface with the CurBet object and override it. Also returns a bool for the sake of Main.
             int bFace;
             int bAmt;
             char l;
@@ -78,7 +78,7 @@ class CurBet{
             return true;
         }
     private:
-        std::vector<std::string> facenumbers = {"ones", "twos", "threes", "fours", "fives", "sixes"};
-        int face;
-        int amt;
+        std::vector<std::string> facenumbers = {"ones", "twos", "threes", "fours", "fives", "sixes"}; //An unchangable vector used when printing a bet.
+        int face; //Dice Face
+        int amt; //Amount
 };

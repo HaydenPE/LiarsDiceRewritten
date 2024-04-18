@@ -4,19 +4,21 @@
 #include "computerThinker.h"
 int main(){
     srand(time(NULL));
-    bool wantToPlay = true;
-    char p;
+    bool wantToPlay = true; //Decides if game continues.
+    char p; //Changes wantToPlay based on input.
     while(wantToPlay){
     bool gameState = true;
     bool lastTurn = false; //true = you made last bet, false = opponent made last bet
-    Board brd;
-    computerThinker opponent;
+    //Pre-Game Setup//
+    Board brd; //The board.
+    computerThinker opponent; //The opponent.
     brd.ShuffleDice();
-    brd.printDice();
     brd.tablestate.changeAmt(1);
     brd.tablestate.changeFace(1);
     opponent.changeTableKnowledge(brd.tablestate);
+    //Pre-Game Setup//
     while(gameState){
+        //Player's Turn//
         brd.printYourDiceOnly();
         if(!brd.tablestate.newBet()){
             break;
@@ -24,6 +26,7 @@ int main(){
         else{
             lastTurn = true;
         }
+        //Opponent's Turn//
         if(opponent.detectLiar(brd.tablestate)){
             gameState = false;
         }

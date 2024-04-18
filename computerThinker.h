@@ -8,17 +8,17 @@
 
 class computerThinker{
     public:
-        CurBet tableKnowledge;
-        double suspicion;
-        int suspiciousFactorThing;
-        bool firstTurnPassed;
+        CurBet tableKnowledge; //A CurBet variable used for comparing the previous state of the table to the current state.
+        double suspicion; //A counter that calls a liar after going over a certain threshhold.
+        int suspiciousFactorThing; //A value used to increment suspicion in certain cases.
+        bool firstTurnPassed; //Makes sure the computer can't call a liar at the very start.
         
-        computerThinker(){
+        computerThinker(){ //Constructor
             suspicion = 0.0;
             suspiciousFactorThing = 0;
             firstTurnPassed = false;
         }
-        ~computerThinker(){}
+        ~computerThinker(){} //Destructor
         void changeTableKnowledge(CurBet bet){
             tableKnowledge = bet;
         }
@@ -43,7 +43,7 @@ class computerThinker{
             }
             return false;
         }
-        void makeBet(CurBet &newBet){
+        void makeBet(CurBet &newBet){ //Using the four variables listed at the top, make a bet, and edit the CurBet  variable fed into it.
             std::cout << "Opponent's turn... \n";
             bool processing = true;
             int choose;

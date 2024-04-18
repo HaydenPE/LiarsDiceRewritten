@@ -31,6 +31,8 @@ Updates:
 
 > Fixed a bug that made dice not reshuffle properly.
 > Fixed a bug where you couldn't play after a game, even if you enter 'y' when prompted.
+> Added comments for the sake of documentation.
+
 --- ---
 
 Known Issues:

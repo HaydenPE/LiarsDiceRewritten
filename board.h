@@ -7,7 +7,7 @@
 
 class Board{
     public:
-        CurBet tablestate;
+        CurBet tablestate; //The table's current bet at any given time.
     
         Board(){} //Constructor
         ~Board(){} //Destructor
@@ -49,7 +49,7 @@ class Board{
             std::cout << "Sorry! " << outputstring << "not a liar.\n";
             return false;
         }
-        void printDice(){
+        void printDice(){ //...prints the dice. Duh.
             std::cout << "Opponent Dice: ";
             for(int i = 0; i < opDice.size(); i++){
                 std::cout << opDice.at(i) << " ";
@@ -61,14 +61,14 @@ class Board{
             }
             std::cout << "\n";
         }
-        void printYourDiceOnly(){
+        void printYourDiceOnly(){ //printDice, but only yours.
             std::cout << "Your Dice: ";
             for(int j = 0; j < yourDice.size(); j++){
                 std::cout << yourDice.at(j) << " ";
             }
             std::cout << "\n";
         }
-        std::vector<int> getAnyDice(int chosen){
+        std::vector<int> getAnyDice(int chosen){ //Allows the choosing of which vector of dice to get.
             switch(chosen){
                 case 0:
                     return opDice;
@@ -78,7 +78,7 @@ class Board{
                     return totalDice;
             }
         }
-        bool noDice(){
+        bool noDice(){ //Checks for the lack of dice. Used for testing.
             if(opDice.size() == 0 || yourDice.size() == 0){
                 return true;
             }
