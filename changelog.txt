@@ -25,6 +25,12 @@ Updates:
             - The opponent will also call you a liar sooner.
 
 
+---4/18/2024---
+
+Updates:
+
+> Fixed a bug that made dice not reshuffle properly.
+> Fixed a bug where you couldn't play after a game, even if you enter 'y' when prompted.
 --- ---
 
 Known Issues:

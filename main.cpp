@@ -3,10 +3,10 @@
 #include "board.h"
 #include "computerThinker.h"
 int main(){
+    srand(time(NULL));
     bool wantToPlay = true;
     char p;
     while(wantToPlay){
-    srand(time(NULL));
     bool gameState = true;
     bool lastTurn = false; //true = you made last bet, false = opponent made last bet
     Board brd;
@@ -39,6 +39,5 @@ int main(){
     if(p == 'n'){
         wantToPlay = false;
     }
-
-    return 0;
+}
 }
